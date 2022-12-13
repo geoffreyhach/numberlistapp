@@ -11,3 +11,17 @@
 - git clone
 - npm install
 - npm run start
+
+
+# Technos
+## Front
+- React
+- Mui
+- Joi (validation des données - seulement côté client)
+
+## Back
+- Express.js
+- Mongoose
+
+## Testing
+- Cypress
