@@ -15,13 +15,17 @@ function NumberItem({ number, id, setNumbers }) {
     return (
         <>
             <ListItemButton
-                component="a"
-                href="#simple-list"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <ListItemText primary={number} />
-                {isHovered && <DeleteIcon color="red" onClick={handleDelete} />}
+                <ListItemText primary={number} data-cy="numberitem" />
+                {isHovered && (
+                    <DeleteIcon
+                        color="red"
+                        onClick={handleDelete}
+                        data-cy="delete-btn"
+                    />
+                )}
             </ListItemButton>
             <Divider />
         </>

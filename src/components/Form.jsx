@@ -5,7 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import axios from "axios";
 
 function Form({ numbers, setNumbers }) {
-    const [number, setNumber] = useState("");
+    const [number, setNumber] = useState();
     const [error, setError] = useState("");
     const ref = useRef(null);
     const schema = Joi.object({
@@ -48,9 +48,10 @@ function Form({ numbers, setNumbers }) {
                     value={number || ""}
                     onChange={(e) => handleChange(e)}
                     inputRef={ref}
+                    data-cy="input"
                 />
-                <IconButton type="submit">
-                    <AddIcon />
+                <IconButton type="submit" disabled={!number}>
+                    <AddIcon data-cy="submit-btn" />
                 </IconButton>
             </Stack>
         </form>
