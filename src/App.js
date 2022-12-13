@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import MainCard from "./components/MainCard";
+import { Stack } from "@mui/system";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <Stack
+            alignItems="center"
+            justifyContent="center"
+            sx={{ minHeight: "100vh" }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <MainCard />
+        </Stack>
+    );
 }
 
 export default App;
